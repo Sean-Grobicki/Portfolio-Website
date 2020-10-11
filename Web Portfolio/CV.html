@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--direction and language set to help with accessibility-->
+<html lang = "en" dir="ltr">
+    <head>
+	   <meta charset = "utf-8">
+	   <title> Sean's E-Portfolio</title> 
+       <!--links the external stylesheet to the page and gives the page a title.-->
+	   <link rel = "stylesheet" href = "Stylesheet/CSS.css">
+        <!--<script src = "Scripts/dropdownNavBar.js"></script>-->
+    </head>
+    <body>
+        <div id = "container"> <!-- div is used for styling to wrap all the content-->
+            <header>
+              <h1>Sean Grobicki's Portfolio</h1>
+               <nav> 
+                   <!-- navigation bar is an unorderd styled list of links in new html5 nav tag -->
+                   <a  href = "index.html" title = "Portfolio Home Page">
+                    <div class = "homeCon divHover">
+                        <li class = "listNav homeButton" > Home</li>
+                    </div>
+                   </a>
+                   
+                   <div class = "projectDropdown divHover">
+                       <li class = "listNav projectButton"><a  href = "Projects/allProjects.php" title = "AllProjects"> All Projects</a></li>
+                       <div class = "projectDropdownContent">
+                         <a href = "Projects/allProjects.php?language=all&type=all&search=" title="All Projects">All Projects</a>
+                         <a href = "Projects/allProjects.php?language=cs&type=all&search=" title="C#">C# Projects</a>
+                         <a href = "Projects/allProjects.php?language=java&type=all&search="title="Java">Java Projects</a>
+                         <a href = "Projects/allProjects.php?language=cpp&type=all&search=" title="C++">C++ Projects </a>
+                        </div>
+                   </div>
+                   
+                   <div class = "educationDropdown divHover">
+                       <li class = "listNav educationButton"><a   href = "Education/uni3.html" title = "Education"> Education </a></li>
+                       <div class = "educationDropdownContent">
+                         <a href = "Education/gcse.html" title="=GCSE">GCSE</a>
+                         <a href = "Education/a-level.html" title="A-Level">A-Level</a>
+                         <a href = "Education/uni1.html" title="1st Year University">1st Year University</a>
+                         <a href = "Education/uni2.html" title="2nd Year University">2nd Year University</a>
+                         <a href = "Education/uni3.html" title="3rd Year University">3rd Year University</a>
+                        </div>
+                   </div>
+                   
+                   <a class = "active" href = "CV.html" title = "CV">
+                       <div class = "cVCon divHover">
+                            <li class = "listNav cVButton"> CV </li>
+                        </div>
+                    </a>
+                      
+                </nav>
+            </header>
+            <h2>CV</h2>
+            <article class = "CV">
+                <h3>Sean Joseph Grobicki</h3>
+                <p><b>Home Address:</b> 22 Erica Drive,<br>
+                    Burnage,<br>
+                    Manchester<br>
+                    M19 1NP</p>
+                <p><b>E-mail:</b> seangrobicki@gmail.com  </p>
+                <p><b>Tel:</b> 07477823223 (mobile)</p>
+                <p><b>Nationality:</b> British</p>
+                <h4>Personal Profile</h4>
+                <div class = "sectionCon">
+                    <ul>
+                        <li>I am a third year Computer Science student at Manchester Metropolitan University who thinks logically, has excellent technical abilities, and is enthusiastic about programming. I enjoy the process of working through problems and finding effective solutions. </li>
+                        <li>During my studies I’ve advanced my project development skills substantially following different project management techniques such as agile scrum and Kanban which has improved my approach to problem solving.</li>
+                        <li>I’m looking for a placement to enhance my knowledge and experience in a broad range of programming languages and environments with a reputable and forward-thinking organisation.</li>
+                    </ul>
+                </div>
+                
+                
+                <h4>Qualifications</h4>
+                <div class = "sectionCon">
+                    <h5>Manchester Metropolitan University (2018 - Present)</h5>
+                    <h6>BSc (Hons) Computer Science</h6>
+                    <p><b>2nd Year Study:</b> Professional Development (77%), Advanced Programming (96%), Algorithms and Data Structures (94%), Computer Networks and Operating Systems (89%)</p>
+                    <p><b>1st Year Study:</b> Programming (95%), Computer Systems Fundamentals (92%), Information Systems (84%), Introduction to Web Design and Development (88%)</p>
+                    <h5>Aquinas Sixth Form College (2016-2018)</h5>
+                    <p><b>A-Levels:</b> Computer Science (A), History (A) and Mathematics (A)</p>
+                    <h5>The Barlow RC High School Science Specialist College (2011-2016)</h5>
+                    <p><b>GCSE:</b> Mathematics (A*), English Language (A), English Literature (A), History (A), Computer Science (A), Physics (A), Chemistry (A), Biology (A), Business Studies (A), Religious Studies (B)</p>
+                </div>
+                <h4>Employment History</h4>
+                <div class = "sectionCon">
+                    <h5>KFC Heaton Chapel (September 2017 – August 2020)</h5>
+                    <p>I worked as a team member for KFC. I developed good communication skills whilst interacting with customers as well as learnt how to work effectively in a team. I was reliable and trustworthy, regularly handling large cash amounts using my own till. I have a close attention to detail which is required to ensure that orders are accurate and customer satisfaction is maintained. I left my role in August 2020 to focus on my final year of study at university.</p>
+                </div>
+                <h4>Skills and Interests</h4>
+                <div class = "sectionCon">
+                    <h5>Skills</h5>
+                    <ul>
+                        <li>C# programming skills have been developed in both college and university. In the 2nd year of college for my coursework I developed a Connect 4 game in which you could compete against an AI as well as another player. In my 2nd year of university I have now elaborated on the more complex data structures used such as the trees and graphs. </li>
+                        <li>Java programming skills in my first year of university were developed during the making of a duck hunting mouse click game in which we used object orientated techniques such as inheritance, polymorphism and abstraction to create an animated game using Processing. </li>
+                        <li>My Communication skills have been developed during Information Systems in the first year of university, where as part of a group, we proposed and implemented a relational database in a business scenario related to a bike rental company. I presented my ideas as part of the group to the class and achieved a mark of 85% for the system proposed and presented.</li>
+                        <li>Web development skills used when making a custom video player and interactive website using HTML, CSS and JavaScript.</li>
+                        <li>Further programming languages covered include Python, PHP and SQL. </li>
+                    </ul>
+                    <h5>Interests</h5>
+                    <ul>
+                        <li>One interest of mine is playing video games. I am starting to use my experience of gaming to develop my own using unity. </li>
+                        <li>A further interest of mine is watching and playing football. While playing, I learned leadership and teamwork skills playing as a goalkeeper winning player of the year twice.</li>
+                    </ul>
+                </div>
+                <h4>References</h4>
+                <p>Available upon request</p>
+            </article>
+        <footer>
+            <!--footer stores information needed on the bottom of the page-->
+            <h3> Contact Me </h3>
+            <table>
+                <tr>
+                    <td><img src ="images/email.png" alt= "email icon">  </td>
+                    <td>Email: seangrobicki@gmail.com </td>
+                </tr>
+                <tr>
+                    <td><img src ="images/mobile.png" alt = "mobile icon"></td>
+                    <td>Mobile:07477823223 </td>
+                </tr>
+            </table>
+        </footer>
+        </div>
+    </body>
+</html>

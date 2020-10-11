@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--direction and language set to help with accessibility-->
+<html lang = "en" dir="ltr">
+    <head>
+	   <meta charset = "utf-8">
+	   <title> Sean Grobicki's Portfolio</title> 
+       <!--links the external stylesheet to the page and gives the page a title.-->
+	   <link rel = "stylesheet" href = "Stylesheet/CSS.css"> 
+        <script src = "Scripts/imageSelector.js"></script>
+    </head>
+    <body>
+        <div id = "container"> <!-- div is used for styling to wrap all the content-->
+            <header>
+              <h1>Sean Grobicki's Portfolio</h1>
+               <nav> 
+                   <!-- navigation bar is an unorderd styled list of links in new html5 nav tag -->
+                   <a class = "active" href = "index.html" title = "Portfolio Home Page">
+                    <div class = "homeCon divHover">
+                        <li class = "listNav homeButton" > Home</li>
+                    </div>
+                    </a>
+                   
+                   <div class = "projectDropdown divHover">
+                       <li class = "listNav projectButton"><a  href = "Projects/allProjects.php?language=all&type=all&search=" title = "AllProjects"> All Projects</a></li>
+                       <div class = "projectDropdownContent">
+                         <a href = "Projects/allProjects.php?language=all&type=all&search=" title="All Projects">All Projects</a>
+                         <a href = "Projects/allProjects.php?language=cs&type=all&search=" title="C#">C# Projects</a>
+                         <a href = "Projects/allProjects.php?language=java&type=all&search="title="Java">Java Projects</a>
+                         <a href = "Projects/allProjects.php?language=cpp&type=all&search=" title="C++">C++ Projects </a>
+                        </div>
+                   </div>
+                   
+                   <div class = "educationDropdown divHover">
+                       <li class = "listNav educationButton"><a   href = "Education/uni3.html" title = "Education"> Education </a></li>
+                       <div class = "educationDropdownContent">
+                         <a href = "Education/gcse.html" title="=GCSE">GCSE</a>
+                         <a href = "Education/a-level.html" title="A-Level">A-Level</a>
+                         <a href = "Education/uni1.html" title="1st Year University">1st Year University</a>
+                         <a href = "Education/uni2.html" title="2nd Year University">2nd Year University</a>
+                         <a href = "Education/uni3.html" title="3rd Year University">3rd Year University</a>
+                        </div>
+                   </div>
+                   
+                   <a href = "CV.html" title = "CV">
+                   <div class = "cVCon divHover">
+                        <li class = "listNav cVButton"> CV </li>
+                    </div>
+                    </a>
+                      
+                </nav>
+            </header>
+            <h2>Home Page</h2>
+            
+            
+            <div class = "imageSlideShow">
+                <h3 id = "imageText"> Hello </h3>
+                <a href="Projects/allProjects.php?language=all"><img class = "slider" src ="images/projectsImage.jpg" alt= "Projects Image"></a>
+                <a href="Education/uni3.html"><img class = "slider" src ="images/educationImage1.png" alt= "Education Image"></a>
+                <a href="CV.html"><img class="slider" src ="images/cvImage1.png" alt= "CV Image"></a>
+                <button id = "goLeft" class = "slideButtons"> &lt; </button>
+                <button id = "goRight" class = "slideButtons"> &gt; </button>
+                    
+            </div>
+            
+            
+            
+    
+            <article id = "about">
+                <!--articles used to seperate the content in containers-->
+                <h3>About Me</h3>
+                <br>
+                <p> Full Name: Sean Grobicki <br><br>
+                    DOB: 18/02/2000 <br><br>
+                    Nationality: British<br><br>
+                Place of Study: <a href = "https://www2.mmu.ac.uk/" title="Home Page of Manchester Metropolitan University" >Manchester Metropolitan University</a><br><br>
+                Email: seangrobicki@gmail.com<br><br>
+                Tel: 07477823223 (mobile)<br> <br>
+            
+                <p>My name is Sean and I'm an 18 year old who lives in Burnage, Manchester. Hobbies that i enjoy include playing video games and playing or watching football. I really enjoy problem solving and is one of the main reasons I enjoy studying this course so much. The feeling you get when a problem is solved and looking back at a project that’s took weeks or months to develop and see the final product is very satisfying and spurs me on to develop my skills and study harder. My inspiration for studying this subject in the first place came when I was choosing my options in year 9 and when the subject was explained to our class it really peaked my interest and in the end convinced me to choose this subject. </p>
+            </article>
+
+        <footer>
+            <!--footer stores information needed on the bottom of the page-->
+            <h3> Contact Me </h3>
+            <table>
+                <tr>
+                    <td><img src ="images/email.png" alt= "email icon">  </td>
+                    <td>Email: seangrobicki@gmail.com </td>
+                </tr>
+                <tr>
+                    <td><img src ="images/mobile.png" alt = "mobile icon"></td>
+                    <td>Mobile:07477823223 </td>
+                </tr>
+            </table>
+        </footer>
+        </div>
+    </body>
+</html>

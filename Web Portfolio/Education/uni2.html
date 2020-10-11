@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang = "en" dir="ltr">
+    <head>
+        <meta charset = "utf-8">
+        <title> Sean's E-Portfolio</title>
+        <link rel = "stylesheet" href = "../Stylesheet/CSS.css">
+    </head>
+    <body>
+        <div id = "container">
+            <header>
+                <h1>Sean Grobicki's Portfolio</h1>
+                <nav> 
+                   <!-- navigation bar is an unorderd styled list of links in new html5 nav tag -->
+                    <a href = "../index.html" title = "Portfolio Home Page">
+                    <div class = "homeCon divHover">
+                        <li class = "listNav homeButton" > Home</li>
+                    </div>
+                    </a>
+                   
+                   <div class = "projectDropdown divHover">
+                       <li class = "listNav projectButton"><a href = "../Projects/allProjects.php" title = "AllProjects"> All Projects</a></li>
+                       <div class = "projectDropdownContent">
+                         <a href = "../Projects/allProjects.php?language=all&type=all&search=" title="All Projects">All Projects</a>
+                         <a href = "../Projects/allProjects.php?language=cs&type=all&search=" title="C#">C# Projects</a>
+                         <a href = "../Projects/allProjects.php?language=java&type=all&search="title="Java">Java Projects</a>
+                         <a href = "../Projects/allProjects.php?language=cpp&type=all&search=" title="C++">C++ Projects </a>
+                        </div>
+                   </div>
+                   
+                   <div class = "educationDropdown divHover">
+                       <li class = "listNav educationButton"><a class = "active"  href = "../Education/uni3.html" title = "Education"> Education </a></li>
+                       <div class = "educationDropdownContent">
+                         <a href = "../Education/gcse.html" title="=GCSE">GCSE</a>
+                         <a href = "../Education/a-level.html" title="A-Level">A-Level</a>
+                         <a href = "../Education/uni1.html" title="1st Year University">1st Year University</a>
+                         <a href = "../Education/uni2.html" title="2nd Year University">2nd Year University</a>
+                         <a href = "../Education/uni3.html" title="3rd Year University">3rd Year University</a>
+                        </div>
+                   </div>
+                   
+                <a href = "../CV.html" title = "CV">
+                   <div class = "cVCon divHover">
+                        <li class = "listNav cVButton"> CV </li>
+                    </div>
+                </a>
+                      
+                </nav>
+            </header>
+            <h2> University Year 2 </h2>
+            <article class = "educationOverview">
+                <h3> Advanced Programming </h3>
+                <p>In Advanced Programming we expanded from programming last year still using Java. One of our assignments was to create a <a href = "../Projects/java.html">scheduler</a> which is shown in the projects. Another assignment was to create an <a href = "../Projects/java.html"> android app </a> within a day which would map the locations of train stations. </p>
+                <h3> Algorithms and Data Structures </h3>
+                <p>Algorithms and Data Structures consisted of implementing different data structures and algorithms using C#. We implemented Graphs and Trees and methods which would manipulate these data structures. The final assignment was to create a desktop application which was a <a href = "../Projects/java.html">word processing application </a> which implemented the text in a tree structure to be able to give information about each word.</p>
+                <h3> Computer Networks and Operating Systems </h3>
+                <p>In this unit the first half consisted of learning how to configure the different components in a network such a routers, switches, and machines. The second half of this unit was studying operating systems learning how to do bash scripting in Linux and understanding the file systems.</p>
+                <h3> Professional Development </h3>
+                <p>This unit’s main component was a group project where we had the brief of creating a <a href = "../Projects/java.html" > POS system which we did in C# which was compatible with a barcode scanner.</a> Another part of the unit was to attend extracurricular activities related to the computing industry which I mainly chose to attend talks on topics I was interested in such as researching the games industry.</p>
+            </article>
+            
+            <article class = "educationQuals">
+                <h3> Units </h3>
+                    <table>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>Advanced Programming</td>
+                            <td>96%</td>
+                        </tr>
+                        <tr>
+                            <td>Algorithms and Data Structures</td>
+                            <td>94%</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Networks and Operating Systems</td>
+                            <td>88%</td>
+                        </tr>
+                        <tr>
+                            <td>Professional Development</td>
+                            <td>95%</td>
+                        </tr>
+                    </table>
+            </article>
+            <footer>
+            <!--footer stores information needed on the bottom of the page-->
+            <h3> Contact Me </h3>
+            <table>
+                <tr>
+                    <td><img src ="../Images/email.png" alt= "email icon">  </td>
+                    <td>Email: seangrobicki@gmail.com </td>
+                </tr>
+                <tr>
+                    <td><img src ="../Images/mobile.png" alt = "mobile icon"></td>
+                    <td>Mobile: 07477823223 </td>
+                </tr>
+            </table>
+        </footer>
+        </div>
+    </body>
+</html>
