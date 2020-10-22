@@ -8,20 +8,19 @@
         <script src = "../Scripts/displayProjectsScript.js"></script>
         <?php
                     $servername = "localhost";
-                    $username = "root";
+                    $username = "u899715571_User";
+                    $password = "U$4NFbpQ8~a";
 
                     // Create connection
-                    $conn = new mysqli($servername, $username);
+                    $conn = new mysqli($servername, $username,$password);
 
                     // Check connection
                     if ($conn->connect_error) {
                       die("Connection failed: " . $conn->connect_error);
                     }
-                    echo "Connected successfully";
-            
-                    mysqli_select_db($conn,"projects");
+                    mysqli_select_db($conn,"u899715571_Projects");
                     
-                    $sql = "SELECT * FROM `projects`";
+                    $sql = "SELECT * FROM `Projects`";
                     
         ?>
         
@@ -39,12 +38,12 @@
                 </a>
                    
                    <div class = "projectDropdown divHover">
-                       <li class = "listNav projectButton"><a class = "active"  href = "../Projects/allProjects.php?language=all&type=all&search=" title = "AllProjects"> All Projects</a></li>
+                       <li class = "listNav projectButton"><a class = "active"  href = "../Projects/allProjects.php?language=all&type=all&search=null" title = "AllProjects"> All Projects</a></li>
                        <div class = "projectDropdownContent">
-                         <a href = "../Projects/allProjects.php?language=all&type=all&search=" title="All Projects">All Projects</a>
-                         <a href = "../Projects/allProjects.php?language=cs&type=all&search=" title="C#">C# Projects</a>
-                         <a href = "../Projects/allProjects.php?language=java&type=all&search="title="Java">Java Projects</a>
-                         <a href = "../Projects/allProjects.php?language=cpp&type=all&search=" title="C++">C++ Projects </a>
+                         <a href = "../Projects/allProjects.php?language=all&type=all&search=null" title="All Projects">All Projects</a>
+                         <a href = "../Projects/allProjects.php?language=cs&type=all&search=null" title="C#">C# Projects</a>
+                         <a href = "../Projects/allProjects.php?language=java&type=all&search=null"title="Java">Java Projects</a>
+                         <a href = "../Projects/allProjects.php?language=oth&type=all&search=null" title="Other">Other Projects </a>
                         </div>
                    </div>
                    
@@ -76,7 +75,7 @@
                     <button id = "allLanguagesFilter"> All Languages </button>
                     <button id = "csProjectsFilter"> C# Projects </button>
                     <button id = "javaProjectsFilter">Java Projects </button>
-                    <button id = "cppProjectsFilter"> C++ Projects </button>
+                    <button id = "otherProjectsFilter">Other Projects </button>
                 </div>
                 
                 <div class = "typeButtonsCon">
@@ -120,35 +119,39 @@
                          {
                              $language = 'cs';
                          }
-                         if($language == 'C++')
-                         {
-                             $language = 'cpp';
-                         }
-                         if($language == 'Java')
+                         else if($language == 'Java')
                          {
                              $language = 'java';
                          }
-                         echo "<article id = '{$name}' class = 'projectArticle {$language} {$row["Type"]}'>
-                                    <h3> {$row["Title"]} </h3>
-                                    <p id = 'language'> <b>Language </b>: {$row["Language"]}</p>
-                                    <div class = 'Overview'>
-                                        <h4> Overview </h4>
-                                        <p>{$row["Overview"]}</p>
+                         else
+                         {
+                             $language = 'oth';
+                         }
+                         $type = $row["Type"];
+                         if($type == 'Uni')
+                         {
+                             $type = 'University';
+                         }
+                         else
+                         {
+                             $type = 'Personal';
+                         }
+                         echo  "<article id = '{$name}' class = 'projectArticle {$language} {$row["Type"]}'>
+                                <h3> {$row["Title"]} </h3>
+                                <p id = 'language'>Language: {$row["Language"]}</p>
+                                <p id = 'type'>Project Type: {$type}</p>
+                                <div class = 'Overview'>
+                                    <h4> Overview </h4>
+                                    <p>{$row["Overview"]}</p>
+                                </div>
+                                <div class = 'links'>
+                                    <div class = 'github'>
+                                        <a href = '{$row["Github"]}'><img src ='../Images/gitHub.png' alt= 'Github Icon' class = 'gitHubIcon'> <p id = 'github'>Github</p></a>
                                     </div>
-                                        
-                                    <table>
-
-                                    <tr>
-                                        <td><img src ='../images/gitHub.png' alt= 'Github Icon' class = 'gitHubIcon'></td>    
-                                        <td><img src ='../images/youtube.png' alt= 'Youtube Icon' class='youtubeIcon'></td> 
-                                        <td><img src ='../images/download.png' alt= 'Download logo' class = 'downloadIcon'></td> 
-                                    </tr>
-                                    <tr>
-                                        <td><a href = '{$row["Github"]}' title = 'Github link'> View GitHub Code </a> </td> 
-                                        <td><a href = '{$row["Youtube"]}' title = 'Youtube link'> Watch Video runthrough </a> </td> 
-                                        <td><a href = '{$row["Download"]}' title = 'Download Link'>Download </a></td> 
-                                    </tr>                
-                                    </table>
+                                    <div class = 'video'>
+                                        <a href = '{$row["Youtube"]}'><img src ='../Images/youtube.png' alt= 'Youtube Icon' class='youtubeIcon'> <p id = 'video'>Video</p></a>
+                                    </div>
+                                </div>
                             </article>";
                         }
                     }

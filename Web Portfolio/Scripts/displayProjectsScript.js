@@ -7,7 +7,7 @@ function initialiseWebPage()
     const allLanguagesButton = document.getElementById( "allLanguagesFilter");
     const csProjectsButton = document.getElementById("csProjectsFilter");
     const javaProjectsButton = document.getElementById("javaProjectsFilter");
-    const cppProjectsButton = document.getElementById("cppProjectsFilter");
+    const otherProjectsButton = document.getElementById("otherProjectsFilter");
     
     //Type Buttons
     
@@ -28,7 +28,7 @@ function initialiseWebPage()
     allLanguagesButton.addEventListener("click",allLanguagesButtonClick);
     csProjectsButton.addEventListener("click",csProjectsButtonClick);
     javaProjectsButton.addEventListener("click",javaProjectsButtonClick);
-    cppProjectsButton.addEventListener("click",cppProjectsButtonClick);
+    otherProjectsButton.addEventListener("click",otherProjectsButtonClick);
     for(var i =0; i < navList.length;i++)
     {
         navList[i].addEventListener("click",navListClick);
@@ -61,17 +61,17 @@ function initialiseWebPage()
         const url = geturl();
         const language = url.get('language');
 
-        if(language == 'cpp')
-        {
-            cppProjectsButtonClick();
-        }
-        else if(language == 'java')
+        if(language == 'java')
         {
             javaProjectsButtonClick();
         }
         else if(language == 'cs')
         {
             csProjectsButtonClick();
+        }
+        else if(language == 'oth')
+        {
+            otherProjectsButtonClick();
         }
         
         const type = url.get('type');
@@ -87,7 +87,7 @@ function initialiseWebPage()
         
         
         const searchText = url.get('search');
-        if(searchText != "")
+        if(searchText != "null")
         {
             search(searchText);
         }
@@ -108,7 +108,7 @@ function initialiseWebPage()
         var url = geturl();
         url.set("language","all");
         url.set("type","all");
-        url.set("search","");
+        url.set("search","null");
         history.replaceState(null,null,"?"+url.toString());
         displayProjectsFrom(allProjects);
     }
@@ -121,21 +121,21 @@ function initialiseWebPage()
         var url = geturl();
         url.set("language","cs");
         url.set("type","all");
-        url.set("search","");
+        url.set("search","null");
         history.replaceState(null,null,"?"+url.toString());
         displayProjectsFrom(csProjects);
     }
 
-    function cppProjectsButtonClick()
+    function otherProjectsButtonClick()
     {
         resetDisplayedProjects();
-        var cppProjects =  document.getElementsByClassName("cpp");
+        var otherProjects =  document.getElementsByClassName("oth");
         var url = geturl();
-        url.set("language","cpp");
+        url.set("language","oth");
         url.set("type","all");
-        url.set("search","");
+        url.set("search","null");
         history.replaceState(null,null,"?"+url.toString());
-        displayProjectsFrom(cppProjects);
+        displayProjectsFrom(otherProjects);
     }
 
     function javaProjectsButtonClick()
@@ -144,7 +144,7 @@ function initialiseWebPage()
         var javaProjects = document.getElementsByClassName("java");
         //change url
         var url = geturl();
-        url.set("search","");
+        url.set("search","null");
         url.set("type","all");
         url.set("language","java");
         history.replaceState(null,null,"?"+url.toString());
@@ -157,7 +157,7 @@ function initialiseWebPage()
     {
         resetDisplayedProjects();
         var url = geturl();
-        url.set("search","");
+        url.set("search","null");
         url.set("type","all");
         url.set("language","all");
         history.replaceState(null,null,"?"+url.toString());
@@ -169,7 +169,7 @@ function initialiseWebPage()
         resetDisplayedProjects();
         var uniProjects = document.getElementsByClassName("Uni");
         var url = geturl();
-        url.set("search","");
+        url.set("search","null");
         url.set("type","uni");
         url.set("language","all");
         history.replaceState(null,null,"?"+url.toString());
@@ -181,7 +181,7 @@ function initialiseWebPage()
         resetDisplayedProjects();
         var uniProjects = document.getElementsByClassName("Pers");
         var url = geturl();
-        url.set("search","");
+        url.set("search","null");
         url.set("type","per");
         url.set("language","all"); 
         history.replaceState(null,null,"?"+url.toString());

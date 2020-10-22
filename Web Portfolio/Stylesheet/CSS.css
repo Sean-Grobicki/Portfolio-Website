@@ -318,8 +318,8 @@ nav
 
 #filter
 {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     border:solid 2px #3066BE;
     padding:1%;
     background-color: #b2cefe;
@@ -372,10 +372,10 @@ nav
 
 #projectsBar
 {
-    width: 20%;
+    width: 25%;
     height: 100vh;
     float: left;
-    margin : 3%;
+    margin : 2%;
     background-color: #b2cefe;
     border:solid 2px #3066BE;
     
@@ -434,83 +434,93 @@ nav
     float : right; 
     border: none;
     border-radius: none;
-    margin: 2%;
-    border-top:solid 2px  #3066BE;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 2%;
+    border:solid 2px  #3066BE;
     width: 65%;
+    padding: 1%;
 }
 
 .projectArticle h3
 {
-    margin-top: 1%;
-    margin-bottom: 2%;
     font-size: 1.4em;
 }
 
+
 .projectArticle #language
 {
-    font-size: 1.3em;
-    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 30px;
 }
+
+.projectArticle #type
+{
+    padding-left: 30px;
+}
+
+
 
 .projectArticle .Overview
 {
-    border:solid 2px #3066BE;
-    padding: 30px;
-    margin-bottom: 3%;
     margin-top: 1%;
+    padding-left: 30px;
+    display: inline-block;
+    width: 67%;
 
 }
 
-.projectArticle .Overview h4
+.projectArticle .links
 {
+    display: inline-block;
+    width: 25%;
+}
+
+
+.projectArticle .github
+{
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    margin: 10%;
+}
+
+.projectArticle .video
+{
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    margin: 10%;
+}
+
+.projectArticle .github img
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projectArticle .video img
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.projectArticle #github
+{
+    text-decoration: none;
     text-align: center;
 }
 
 
-.projectArticle table
+.projectArticle #video
 {
-    margin-left: auto;
-    margin-right: auto;
-    width : 100%;
-}
-
-.projectArticle table tr td
-{
+    text-decoration: none;
     text-align: center;
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-    width : 33%;
 }
 
-
-
-
-img.gitHubIcon
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-
-img.youtubeIcon
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-
-img.downloadIcon
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
 /* Education Formatting */
 
